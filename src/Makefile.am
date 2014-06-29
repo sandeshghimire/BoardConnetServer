@@ -1,4 +1,4 @@
 SUBDIRS=. test lib
-bin_PROGRAMS=BoardConnetServer
-BoardConnetServer_SOURCES=main.cpp
+bin_PROGRAMS=bcsd
+bcsd_SOURCES=main.cpp
 
