@@ -4,8 +4,8 @@
 class BoardConnectServer
 {
 public:
-	BoardConnetServer();
-	~BoardConnetServer();
+	BoardConnectServer();
+	~BoardConnectServer();
 private:
 protected:
 
