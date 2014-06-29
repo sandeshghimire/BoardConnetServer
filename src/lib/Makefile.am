@@ -1,2 +1,4 @@
 lib_LIBRARIES = libbc.a 
 libbc_a_SOURCES = bc_lib.cpp
+include_HEADERS = bc_lib.h
+
