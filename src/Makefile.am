@@ -1,3 +1,3 @@
-bin_PROGRAMS=a.out
-a_out_SOURCES=BoardConnetServer.cpp
+bin_PROGRAMS=BoardConnetServer
+BoardConnetServer_SOURCES=main.cpp
 
