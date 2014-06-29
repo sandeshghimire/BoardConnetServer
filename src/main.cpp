@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : BoardConnetServer.cpp
+ Name        : main.cpp
  Author      : Sandesh J Ghimire
  Version     :
  Copyright   : Your copyright notice
