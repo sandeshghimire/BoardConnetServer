@@ -22,25 +22,6 @@
 *.app
 
 
-.DS_Store
-Makefile.in
-aclocal.m4
-autom4te.cache/
-build-aux/
-compile
-config.guess
-config.h.in
-config.h.in~
-config.sub
-configure
-depcomp
-install-sh
-missing
-src/.DS_Store
-src/Makefile.in
-src/lib/Makefile.in
-src/test/._Makefile
-src/test/Makefile.in
 
 
 
