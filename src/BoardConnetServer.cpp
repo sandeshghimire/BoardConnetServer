@@ -2,6 +2,7 @@
 
 BoardConnectServer::BoardConnectServer()
 {
+	init_complete = 0;
 }
 
 BoardConnectServer::~BoardConnectServer()

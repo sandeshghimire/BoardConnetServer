@@ -6,6 +6,7 @@ class BoardConnectServer
 public:
 	BoardConnectServer();
 	~BoardConnectServer();
+
 	int getInitComplete() const;
 	void setInitComplete(int initComplete);
 
