@@ -59,11 +59,18 @@ namespace BoardConnet
         }
         return 0;
 
+        (void) daemon_init();
+
     }
     int BoardConnectServer::daemon_init()
     {
-        if (1)
+        pid_t pid;
 
+        if((!bci.debug) || ( !bci.foreground))
+        {
+            if ( 0 < (pid = fork()));
+
+        }
         return 0;
     }
 }

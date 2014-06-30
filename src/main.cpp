@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "BoardConnetServer.h"
 
 using namespace std;
@@ -9,5 +10,14 @@ int main(int argc, char ** argv)
     BoardConnectServer * bcs = new BoardConnectServer;
     bcs->select_opration_mode(argc, argv);
     bcs->daemon_init();
+
+    for(;;)
+    {
+        sleep(1);
+    }
+
+
+
+
     return 0;
 }
