@@ -20,4 +20,9 @@ namespace BoardConnet
     {
         init_complete = initComplete;
     }
+
+    int BoardConnectServer::select_opration_mode(int argc, char *command[])
+    {
+
+    }
 }
