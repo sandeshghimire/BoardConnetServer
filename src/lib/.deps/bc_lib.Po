@@ -1,0 +1,6 @@
+bc_lib.o: bc_lib.cpp /usr/include/stdc-predef.h \
+ /usr/include/i386-linux-gnu/bits/predefs.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/i386-linux-gnu/bits/predefs.h:

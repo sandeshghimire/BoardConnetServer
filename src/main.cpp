@@ -1,19 +1,13 @@
-/*
- ============================================================================
- Name        : main.cpp
- Author      : Sandesh J Ghimire
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C++,
- ============================================================================
- */
-
 #include <iostream>
+#include "BoardConnetServer.h"
+
 
 using namespace std;
+using namespace BoardConnet;
+
 
 int main(void)
 {
-	cout << "!!!Hello World!!!" << endl; /* prints !!!Hello World!!! */
+
 	return 0;
 }

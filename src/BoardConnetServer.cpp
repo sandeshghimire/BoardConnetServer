@@ -1,21 +1,23 @@
 #include "BoardConnetServer.h"
 
-BoardConnectServer::BoardConnectServer()
+namespace BoardConnet
 {
-	init_complete = 0;
-}
+    BoardConnectServer::BoardConnectServer()
+    {
+        init_complete = 0;
+    }
 
-BoardConnectServer::~BoardConnectServer()
-{
-}
+    BoardConnectServer::~BoardConnectServer()
+    {
+    }
 
-inline int BoardConnectServer::getInitComplete() const
-{
-	return init_complete;
-}
+    inline int BoardConnectServer::getInitComplete() const
+    {
+        return init_complete;
+    }
 
-inline void BoardConnectServer::setInitComplete(int initComplete)
-{
-	init_complete = initComplete;
+    inline void BoardConnectServer::setInitComplete(int initComplete)
+    {
+        init_complete = initComplete;
+    }
 }
-

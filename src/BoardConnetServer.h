@@ -1,19 +1,24 @@
+
 #include <iostream>
 #include <iomanip>
 
-class BoardConnectServer
+namespace BoardConnet
 {
-public:
-	BoardConnectServer();
-	~BoardConnectServer();
 
-	int getInitComplete() const;
-	void setInitComplete(int initComplete);
+    class BoardConnectServer
+    {
+    public:
+        BoardConnectServer();
+        ~BoardConnectServer();
 
-private:
-	int init_complete;
+        int getInitComplete() const;
+        void setInitComplete(int initComplete);
 
-protected:
+    private:
+        int init_complete;
 
-};
+    protected:
+
+    };
+}
 
