@@ -68,18 +68,18 @@ namespace BoardConnet
             {
             case 'd':
                 bci.debug = 1;
-                cout << "Runnin in debug mode " << endl;
+                cout << "Running in debug mode " << endl;
                 break;
             case 'f':
                 bci.foreground = 1;
-                cout << "Runnin in foreground mode " << endl;
+                cout << "Running in foreground mode " << endl;
                 break;
             case 'n':
                 bci.terminate;
                 cout << "Terminating Daemon " << endl;
                 break;
             default:
-                cout << "Invalid option " << endl;
+                cout << "Running in background mode " << endl;
                 break;
             }
         }
@@ -100,15 +100,21 @@ namespace BoardConnet
         if ((!bci.debug) || (!bci.foreground))
         {
             if (0 < (pid = fork()))
-                ;
             {
                 syslog(LOG_DEBUG, "Unable to start daemon");
                 return -1;
             }
-            (void)setsid();
-            rVlaue = chdir("/");
-            (void)umask(0);
-
+            else if (pid != 0)
+            {
+                return 0;
+            }
+            else
+            {
+                (void) setsid();
+                (void) chdir("/");
+                (void) umask(0);
+                exit(1);
+            }
         }
         return 0;
     }

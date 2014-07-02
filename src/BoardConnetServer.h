@@ -14,7 +14,7 @@ namespace BoardConnet
         int foreground;
         int terminate;
 
-    }board_connect_init;
+    } board_connect_init;
 
     class BoardConnectServer
     {
@@ -29,7 +29,6 @@ namespace BoardConnet
 
     private:
         board_connect_init bci;
-
 
     protected:
 
