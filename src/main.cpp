@@ -10,14 +10,11 @@ int main(int argc, char ** argv)
     BoardConnectServer * bcs = new BoardConnectServer;
     bcs->select_opration_mode(argc, argv);
     bcs->daemon_init();
-
-    for(;;)
+    for (;;)
     {
+
+        cout << "I am a 1s Task " << endl;
         sleep(1);
     }
-
-
-
-
     return 0;
 }

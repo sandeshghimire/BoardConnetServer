@@ -5,8 +5,12 @@
 #include <iostream>
 #include <iomanip>
 
+#ifndef BOARD_CONNECT_SERVER_H
+#define BOARD_CONNECT_SERVER_H
+
 namespace BoardConnet
 {
+
     typedef struct BoardConnetInit
     {
         int init_complete;
@@ -26,12 +30,12 @@ namespace BoardConnet
         void setInitComplete(int initComplete);
         int select_opration_mode(int argc, char **argv);
         int daemon_init();
-
     private:
         board_connect_init bci;
-
     protected:
 
     };
 }
+
+#endif
 

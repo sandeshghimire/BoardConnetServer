@@ -33,6 +33,9 @@ using namespace std;
 #define LOG_INFO 6
 #define LOG_DEBUG 7
 
+const char * bcs_socket1 = "/tmp/.bcs_sock1";
+const char * bcs_socket2 = "/tmp/.bcs_sock2";
+
 namespace BoardConnet
 {
     BoardConnectServer::BoardConnectServer()
@@ -87,18 +90,16 @@ namespace BoardConnet
         {
             // do nothing
         }
-        return 0;
-
         (void) daemon_init();
-
+        return 0;
     }
+
     int BoardConnectServer::daemon_init()
     {
         pid_t pid;
         int rVlaue;
 
-
-        if ((!bci.debug) || (!bci.foreground))
+        if ((!bci.debug) && (!bci.foreground))
         {
 
             if (0 < (pid = fork()))
@@ -113,7 +114,10 @@ namespace BoardConnet
             else
             {
                 (void) setsid();
-                (void) chdir("/");
+                if (-1 == chdir("/"))
+                {
+                    syslog(LOG_DEBUG, "Unable to change dir ");
+                }
                 (void) umask(0);
             }
         }
