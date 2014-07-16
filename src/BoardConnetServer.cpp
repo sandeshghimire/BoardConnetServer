@@ -97,23 +97,24 @@ namespace BoardConnet
         pid_t pid;
         int rVlaue;
 
+
         if ((!bci.debug) || (!bci.foreground))
         {
+
             if (0 < (pid = fork()))
             {
                 syslog(LOG_DEBUG, "Unable to start daemon");
-                return -1;
+                exit(-1);
             }
             else if (pid != 0)
             {
-                return 0;
+                exit(1);
             }
             else
             {
                 (void) setsid();
                 (void) chdir("/");
                 (void) umask(0);
-                exit(1);
             }
         }
         return 0;
