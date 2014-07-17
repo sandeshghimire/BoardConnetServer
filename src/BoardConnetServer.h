@@ -30,6 +30,7 @@ namespace BoardConnet
         void setInitComplete(int initComplete);
         int select_opration_mode(int argc, char **argv);
         int daemon_init();
+
     private:
         board_connect_init bci;
     protected:

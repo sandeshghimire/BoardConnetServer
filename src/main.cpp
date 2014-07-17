@@ -12,7 +12,6 @@ int main(int argc, char ** argv)
     bcs->daemon_init();
     for (;;)
     {
-
         cout << "I am a 1s Task " << endl;
         sleep(1);
     }
