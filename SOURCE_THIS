@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+export PATH=/opt/altera-br/toolchain/usr/bin:$PATH
+export ARCH=arm
+export TARGET_PREFIX=arm-buildroot-linux-uclibcgnueabi-
+export CROSS_COMPILE=arm-buildroot-linux-uclibcgnueabi-
+export ENVIRONMENT_SET=Yes
+echo "Environment set."
