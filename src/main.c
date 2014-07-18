@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "board_connet_server.h"
+#include "board_connect_server.h"
 
 int main(int argc, char ** argv)
 {

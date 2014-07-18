@@ -1,4 +1,4 @@
-#include "board_connet_server.h"
+#include "board_connect_server.h"
 
 #define LOG_EMERGENCY   0
 #define LOG_ALERT   1
