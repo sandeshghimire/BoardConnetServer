@@ -1,5 +1,7 @@
 #include "board_connect_server.h"
-
+/*--------------------------------------------------------------------------*/
+/*                              defines                                     */
+/*--------------------------------------------------------------------------*/
 #define LOG_EMERGENCY   0
 #define LOG_ALERT   1
 #define LOG_CRITICAL    2
@@ -8,22 +10,59 @@
 #define LOG_NOTICE  5
 #define LOG_INFO 6
 #define LOG_DEBUG 7
+/*--------------------------------------------------------------------------*/
+/*                              types                                       */
+/*--------------------------------------------------------------------------*/
 
+/*--------------------------------------------------------------------------*/
+/*                              constants                                   */
+/*--------------------------------------------------------------------------*/
 const char * bcs_socket1 = "/tmp/.bcs_sock1";
 const char * bcs_socket2 = "/tmp/.bcs_sock2";
 
+/*--------------------------------------------------------------------------*/
+/*                              data                                        */
+/*--------------------------------------------------------------------------*/
 
+/*--------------------------------------------------------------------------*/
+/*                              static                                      */
+/*--------------------------------------------------------------------------*/
 static run_time rt;
+
+/*--------------------------------------------------------------------------*/
+/*                              static functions                            */
+/*--------------------------------------------------------------------------*/
 static void select_operation_mode(int, char**);
 static int daemon_init(void);
+/*--------------------------------------------------------------------------*/
+/*                              functions                                   */
+/*--------------------------------------------------------------------------*/
+/*
+ ----------------------------------------------------------------------------
+ init_board_connect_server
 
+ Parameters:
+ NONE
 
+ Return value:
+
+ -----------------------------------------------------------------------------
+ */
 int init_board_connect_server(int argc, char**command)
 {
     select_operation_mode(argc, command);
 }
+/*
+ ----------------------------------------------------------------------------
+ select_operation_mode
 
+ Parameters:
+ NONE
 
+ Return value:
+
+ -----------------------------------------------------------------------------
+ */
 static void select_operation_mode(int argc, char**command)
 {
     int option = 0;
@@ -49,9 +88,9 @@ static void select_operation_mode(int argc, char**command)
             printf("Invalid command \n");
         }
 
-        if ( !rt.debug && !rt.foreground)
+        if (!rt.debug && !rt.foreground)
         {
-            if ( -1 == daemon_init())
+            if (-1 == daemon_init())
             {
                 syslog(LOG_DEBUG, "Unable to start daemon");
                 exit(-1);
@@ -59,7 +98,17 @@ static void select_operation_mode(int argc, char**command)
         }
     }
 }
+/*
+ ----------------------------------------------------------------------------
+ daemon_init
 
+ Parameters:
+ NONE
+
+ Return value:
+
+ -----------------------------------------------------------------------------
+ */
 static int daemon_init(void)
 {
     pid_t pid;
@@ -74,5 +123,4 @@ static int daemon_init(void)
     umask(0);
     return 0;
 }
-
 
