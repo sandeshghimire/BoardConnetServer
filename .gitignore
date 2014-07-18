@@ -11,7 +11,20 @@
 
 # Compiled Static libraries
 *.lai
-*.la
+*kefile
+config.h
+config.log
+config.status
+src/.deps/
+src/Makefile
+src/bcsd
+src/lib/.deps/
+src/lib/Makefile
+src/test/.deps/
+src/test/Makefile
+src/test/bc_test
+stamp-h1
+.la
 *.a
 *.lib
 
