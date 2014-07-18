@@ -1,2 +1,2 @@
 bin_PROGRAMS=bc_test
-bc_test_SOURCES=bc_test.cpp
+bc_test_SOURCES=bc_test.c

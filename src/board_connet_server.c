@@ -1,26 +1,3 @@
-#include <stdio.h>
-#include <string>
-#include <syslog.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <sys/un.h>
-#include <sys/mman.h>
-#include <sys/ioctl.h>
-#include <sys/time.h>
-#include <sys/wait.h>   /* For WEXITSTATUS */
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <net/if.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/socket.h>
-#include <pthread.h>
-#include <syslog.h>
-#include <sched.h>
-#include <mqueue.h>
 #include "board_connet_server.h"
 
 #define LOG_EMERGENCY   0
