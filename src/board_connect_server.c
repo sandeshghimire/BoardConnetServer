@@ -51,6 +51,7 @@ static int daemon_init(void);
 int init_board_connect_server(int argc, char**command)
 {
     select_operation_mode(argc, command);
+
 }
 /*
  ----------------------------------------------------------------------------
