@@ -9,20 +9,13 @@
 #include <unistd.h>
 #include <syslog.h>
 #include <string.h>
+#include <stdint.h>
 
-#ifndef uint8_t
-typedef unsigned char uint8_t;
-#endif
-
-#ifndef uint16_t
-typedef unsigned short uint16_t;
-#endif
-
-#ifndef uint32_t
-typedef unsigned int uint32_t;
-#endif
+#define SIZE_OF_CHAR 1
+#define SIZE_OF_SHORT 2
+#define SIZE_OF_INT 4
+#define SIZE_OF_LONG 8
 
 
 
-
-#endif BC_TYPES_H
+#endif /*BC_TYPES_H*/
